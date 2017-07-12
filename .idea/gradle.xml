@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/01drawround" />
+            <option value="$PROJECT_DIR$/02diycontroller" />
+            <option value="$PROJECT_DIR$/03listview" />
+            <option value="$PROJECT_DIR$/04_1FragmentTest" />
+            <option value="$PROJECT_DIR$/04_2FragmentPractice" />
+            <option value="$PROJECT_DIR$/04_fragment_chen" />
+            <option value="$PROJECT_DIR$/05_1BroadcastTest" />
+            <option value="$PROJECT_DIR$/05_3broadcastPractice" />
+            <option value="$PROJECT_DIR$/05_chen" />
+            <option value="$PROJECT_DIR$/06_1DatabaseTest" />
+            <option value="$PROJECT_DIR$/06_2FilePersistenceTest" />
+            <option value="$PROJECT_DIR$/06_chen" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/firstlinecode_01activity" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

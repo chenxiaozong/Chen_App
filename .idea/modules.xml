@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01drawround/01drawround.iml" filepath="$PROJECT_DIR$/01drawround/01drawround.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02diycontroller/02diycontroller.iml" filepath="$PROJECT_DIR$/02diycontroller/02diycontroller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03listview/03listview.iml" filepath="$PROJECT_DIR$/03listview/03listview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_1FragmentTest/04_1FragmentTest.iml" filepath="$PROJECT_DIR$/04_1FragmentTest/04_1FragmentTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_2FragmentPractice/04_2FragmentPractice.iml" filepath="$PROJECT_DIR$/04_2FragmentPractice/04_2FragmentPractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_fragment_chen/04_fragment_chen.iml" filepath="$PROJECT_DIR$/04_fragment_chen/04_fragment_chen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_1BroadcastTest/05_1BroadcastTest.iml" filepath="$PROJECT_DIR$/05_1BroadcastTest/05_1BroadcastTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_3broadcastPractice/05_3broadcastPractice.iml" filepath="$PROJECT_DIR$/05_3broadcastPractice/05_3broadcastPractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_chen/05_chen.iml" filepath="$PROJECT_DIR$/05_chen/05_chen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06_1DatabaseTest/06_1DatabaseTest.iml" filepath="$PROJECT_DIR$/06_1DatabaseTest/06_1DatabaseTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06_2FilePersistenceTest/06_2FilePersistenceTest.iml" filepath="$PROJECT_DIR$/06_2FilePersistenceTest/06_2FilePersistenceTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06_chen/06_chen.iml" filepath="$PROJECT_DIR$/06_chen/06_chen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chen_App.iml" filepath="$PROJECT_DIR$/Chen_App.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/firstlinecode_01activity/firstlinecode_01activity.iml" filepath="$PROJECT_DIR$/firstlinecode_01activity/firstlinecode_01activity.iml" />
+    </modules>
+  </component>
+</project>
