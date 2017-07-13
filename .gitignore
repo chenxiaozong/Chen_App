@@ -1,0 +1,17 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/workspace.xml
+01drawround/build/
+02diycontroller/build/
+03listview/build/
+04_1FragmentTest/build/
+04_2FragmentPractice/build/
+04_fragment_chen/build/
+05_1BroadcastTest/build/
+05_3broadcastPractice/build/
+05_chen/build/
+06_1DatabaseTest/build/
+06_2FilePersistenceTest/build/
+app/build/
+build/
+firstlinecode_01activity/build/
