@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.FileDate" />
-        <activity android:name=".activity.ReadFileData"></activity>
+        <activity android:name=".activity.ReadFileData" />
+        <activity android:name=".activity.SaveToSP"></activity>
     </application>
 
 </manifest>

@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.example.a06_chen.activity.FileDate;
 import com.example.a06_chen.activity.ReadFileData;
+import com.example.a06_chen.activity.SaveToSP;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -49,6 +50,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.bt_3_file_save:
+                intent = new Intent(MainActivity.this, SaveToSP.class);
+                startActivity(intent);
                 break;
             case R.id.bt_4_file_save:
                 break;

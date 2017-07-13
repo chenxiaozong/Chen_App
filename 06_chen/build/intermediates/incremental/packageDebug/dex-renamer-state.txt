@@ -1,0 +1,7 @@
+#Thu Jul 13 17:23:13 CST 2017
+base.0=/Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_3158fdeccc9d5b83aa13d345ca890a2d4c91ad8f
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_30cd3f7034b6a0b0f217f390d99ddb8ea48dad33/classes.dex
+base.1=/Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_30cd3f7034b6a0b0f217f390d99ddb8ea48dad33
+file.0=/Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_3158fdeccc9d5b83aa13d345ca890a2d4c91ad8f/classes.dex

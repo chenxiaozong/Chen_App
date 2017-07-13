@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
+        "source": "/Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher_round.png",
+        "source": "/Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    }
+]

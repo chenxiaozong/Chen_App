@@ -1,0 +1,99 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:2:1-24:12
+	package
+		ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:3:5-35
+		INJECTED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml
+		INJECTED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml
+		INJECTED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml
+		INJECTED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml
+application
+ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:5:5-22:19
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/chen/.android/build-cache/dea694be781fd39b62b6db4dc7bec2809da5b526/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/chen/.android/build-cache/77d31e0f40caf5ef658fe79b6cce9e5767dfc24f/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/chen/.android/build-cache/1a7c3134d260ce3da05a18ce8c3926ae4bb491a3/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/chen/.android/build-cache/7522cce916d4ff87a66a77227eae543c6fed7416/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/chen/.android/build-cache/cc8e6d1473e8f9c17183288108a52675c8841924/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/chen/.android/build-cache/c4cf1620cba0f26e364b6f909d12b115d9d3581a/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/chen/.android/build-cache/c32ab382dc2e70cb4d5dd8ea70852956a90cde34/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/chen/.android/build-cache/e67a1dcfaf6a94197cdcaf78b13880342631379e/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/chen/.android/build-cache/e85979d0047eb3e783d3d9661c265a449780a2a9/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/chen/.android/build-cache/3d076822f6d00f41661dc5736caaba96eee7e6f3/output/AndroidManifest.xml:9:5-20
+	android:label
+		ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:8:9-41
+	android:supportsRtl
+		ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:10:9-35
+	android:roundIcon
+		ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:9:9-54
+	android:allowBackup
+		ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:6:9-35
+	android:icon
+		ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:7:9-43
+	android:theme
+		ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:11:9-40
+activity#com.example.a06_chen.MainActivity
+ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:12:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:16:27-74
+activity#com.example.a06_chen.activity.FileDate
+ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:19:9-55
+	android:name
+		ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:19:19-52
+activity#com.example.a06_chen.activity.ReadFileData
+ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:20:9-59
+	android:name
+		ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:20:19-56
+activity#com.example.a06_chen.activity.SaveToSP
+ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:21:9-64
+	android:name
+		ADDED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml:21:19-52
+uses-sdk
+INJECTED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/chen/.android/build-cache/dea694be781fd39b62b6db4dc7bec2809da5b526/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/chen/.android/build-cache/77d31e0f40caf5ef658fe79b6cce9e5767dfc24f/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/chen/.android/build-cache/1a7c3134d260ce3da05a18ce8c3926ae4bb491a3/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/chen/.android/build-cache/7522cce916d4ff87a66a77227eae543c6fed7416/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/chen/.android/build-cache/cc8e6d1473e8f9c17183288108a52675c8841924/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/chen/.android/build-cache/c4cf1620cba0f26e364b6f909d12b115d9d3581a/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/chen/.android/build-cache/c32ab382dc2e70cb4d5dd8ea70852956a90cde34/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/chen/.android/build-cache/e67a1dcfaf6a94197cdcaf78b13880342631379e/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/chen/.android/build-cache/e85979d0047eb3e783d3d9661c265a449780a2a9/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/chen/.android/build-cache/3d076822f6d00f41661dc5736caaba96eee7e6f3/output/AndroidManifest.xml:5:5-7:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/chen/.android/build-cache/dea694be781fd39b62b6db4dc7bec2809da5b526/output/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml
+		INJECTED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml
+		INJECTED from /Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/chen/.android/build-cache/dea694be781fd39b62b6db4dc7bec2809da5b526/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/chen/.android/build-cache/77d31e0f40caf5ef658fe79b6cce9e5767dfc24f/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/chen/.android/build-cache/1a7c3134d260ce3da05a18ce8c3926ae4bb491a3/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/chen/.android/build-cache/7522cce916d4ff87a66a77227eae543c6fed7416/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/chen/.android/build-cache/cc8e6d1473e8f9c17183288108a52675c8841924/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/chen/.android/build-cache/c4cf1620cba0f26e364b6f909d12b115d9d3581a/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/chen/.android/build-cache/c32ab382dc2e70cb4d5dd8ea70852956a90cde34/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/chen/.android/build-cache/e67a1dcfaf6a94197cdcaf78b13880342631379e/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/chen/.android/build-cache/e85979d0047eb3e783d3d9661c265a449780a2a9/output/AndroidManifest.xml:25:5-27:41
+	android:value
+		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/chen/.android/build-cache/dea694be781fd39b62b6db4dc7bec2809da5b526/output/AndroidManifest.xml:27:9-38
+	android:name
+		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/chen/.android/build-cache/dea694be781fd39b62b6db4dc7bec2809da5b526/output/AndroidManifest.xml:26:9-47

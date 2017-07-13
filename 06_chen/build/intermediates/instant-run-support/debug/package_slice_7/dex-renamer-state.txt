@@ -1,0 +1,4 @@
+#Mon Jul 10 17:58:18 CST 2017
+base.0=/Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7
+renamed.0=classes.dex
+file.0=/Users/chen/code/AndroidStudioProjects/Chen_App/06_chen/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex
