@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">06_chen</string>
+    <string name="createdatabase">CreateDataBase</string>
+    <string name="insert_book">Insert Book</string>
+    <string name="retrieve_book">RetrieveBook</string>
+    <string name="delete_book">DeleteBook</string>
+    <string name="update_book">UpdateBook</string>
 </resources>

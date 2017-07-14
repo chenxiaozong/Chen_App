@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".activity.FileDate" />
         <activity android:name=".activity.ReadFileData" />
-        <activity android:name=".activity.SaveToSP"></activity>
+        <activity android:name=".activity.SaveToSP" />
+        <activity android:name=".activity.TestSqliteActivity"></activity>
     </application>
 
 </manifest>

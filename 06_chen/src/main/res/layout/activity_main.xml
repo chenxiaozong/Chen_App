@@ -35,7 +35,7 @@
         android:layout_height="wrap_content" />
 <Button
         android:id="@+id/bt_4_file_save"
-        android:text="4. 从SharePrefrence读取数据"
+        android:text="4. 使用SqlLite"
         android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

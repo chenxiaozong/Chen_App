@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.a06_chen.activity.TestSqliteActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/bt_creat_sqdb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/createdatabase"
+            android:textAllCaps="false" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/bt_insert_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/insert_book"
+            android:textAllCaps="false" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/et_insert_book_name"
+                    android:hint="name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/et_insert_book_author"
+                    android:hint="author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:hint="price"
+                    android:id="@+id/et_insert_book_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:hint="pages"
+                    android:id="@+id/et_insert_book_pages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bt_update_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/update_book"
+            android:textAllCaps="false" />
+
+            <EditText
+                android:hint="book id"
+                android:id="@+id/et_update_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/et_update_price"
+                android:layout_width="wrap_content"
+                android:hint="price"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bt_delete_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_book"
+            android:textAllCaps="false" />
+
+            <EditText
+                android:hint="book id"
+                android:id="@+id/et_delete_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/bt_retrieve_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/retrieve_book"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            android:background="@android:color/darker_gray"
+            android:hint="info" />
+    </ScrollView>
+
+</LinearLayout>
