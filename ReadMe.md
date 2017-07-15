@@ -7,4 +7,4 @@ Android 第一行代码笔记
 
 ## 6.[数据存储](06_chen/0note/Android数据存储.md)
 
-## 7.[内容提供者](07_1callphone/note/Android跨程序共享数据.md)
+## 7.[内容提供者](07_1callphone/note/ContentProvider.md)
