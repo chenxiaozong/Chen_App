@@ -194,6 +194,97 @@ public class NotificationActivity extends AppCompatActivity {
 
 ```
 
+# 4. 通知栏进阶
+
+## 1. 通知设置声音
+
+```java
+     .setSound(Uri.fromFile(new File("/system/media/audio/ringtones/IceLead.ogg"))) //使用声音 
+```
+
+## 2. 通知设置震动
+
+```java
+  .setVibrate(new long[]{0,3000,1000,2000}) //使用震动
+```
+> 添加权限
+
+```xml
+    <!--使用震动权限-->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+```
+
+
+## 3. 通知设置LED灯显示
+
+```java
+.setLights(Color.GREEN,1000,2000)// 设置颜色， {颜色，亮的时长，暗的时长}
+```
+
+
+## 4. 通知栏设置默认提示效果
+```java
+.setDefaults(NotificationCompat.DEFAULT_ALL) //使用通知的默认效果
+```
+
+# 5. 通知栏高级
+
+> setStyle() --构建富文本的通知内容
+
+## 1. 通知栏设置样式(style)
+### 1. 显示长文本
+```java
+        Notification notification = new NotificationCompat.Builder(context)
+                .setContentTitle("通知")
+                .setWhen(System.currentTimeMillis())
+                .setAutoCancel(true)
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setLargeIcon(BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher))
+                .setStyle(new NotificationCompat.BigTextStyle().bigText("This is a notifiacatioin form notification test," +
+                        " and you can see massage from the main context."))
+                .build();
+```
+
+
+>效果：
+
+![Image Title](style_longtext.png) 
+
+
+
+
+### 2. 显示大图片
+
+```java
+        Notification notification = new NotificationCompat.Builder(context)
+                .setContentTitle("通知")
+                .setWhen(System.currentTimeMillis())
+                .setAutoCancel(true)
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(BitmapFactory.decodeResource(getResources(),R.drawable.big_image)))
+                .build();
+
+```
+
+> 效果：
+
+![显示大图片](style_bigimg.png) 
+
+
+
+
+## 2. 通知设置重要程度(Priority)
+
+> 设置通知等级最高
+
+```java
+.setPriority(NotificationCompat.PRIORITY_MAX) //设置通知等级最高
+```
+
+> 效果：
+
+![Image Title](priority.png) 
+
 
 
 
