@@ -1,69 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.a06_chen.activity.SaveToSP">
 
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Name"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/et_input_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:hint="Tom" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Age"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/et_input_age"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:hint="12" />
+        </TableRow>
+
+        <TableRow>
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Male:"
+                    android:layout_weight="1"
+                    android:textSize="20sp" />
+                <EditText
+                    android:id="@+id/et_input_bl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="true" />
+
+        </TableRow>
+    </TableLayout>
     <LinearLayout
-        android:padding="10dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <TextView
-            android:textSize="20sp"
-            android:text="Name:"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/bt_save"
+            android:text="Save"
+            android:textAllCaps="false"
 
-        <EditText
-            android:id="@+id/et_input_name"
-            android:hint="Tom"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:padding="10dp"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:textSize="20sp"
-            android:text="age:"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/bt_load"
+            android:text="Load"
+            android:textAllCaps="false"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content" />
-
-        <EditText
-            android:id="@+id/et_input_age"
-            android:hint="12"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/bt_clear"
+            android:text="Clear"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:padding="10dp"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:textSize="20sp"
-            android:text="Bolean:"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:id="@+id/et_input_bl"
-            android:hint="true"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/bt_clear_sp"
+            android:text="ClearSP"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
-
-
 
 </LinearLayout>
 
