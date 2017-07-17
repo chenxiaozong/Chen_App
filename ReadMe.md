@@ -9,6 +9,6 @@ Android 第一行代码笔记
 
 ## 7.[内容提供者](07_1callphone/note/ContentProvider.md)
 ## 8.多媒体
-###1. [通知栏](08_1notificationtest/note/Notification.md)
+### 1. [通知栏](08_1notificationtest/note/Notification.md)
 
-###2. [拍照播放视频音频](08_2camera/08_2/8_2camera.md)
+### 2. [拍照播放视频音频](08_2camera/08_2/8_2camera.md)
