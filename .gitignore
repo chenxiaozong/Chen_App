@@ -31,3 +31,14 @@ firstlinecode_01activity/build/
 08_1notificationtest/build
 /08_1notificationtest/libs/
 /08_1notificationtest/src/test/
+.DS_Store
+.gradle/3.3/tasks/_08_04playaudio_compileDebugJavaWithJavac/
+.gradle/3.3/tasks/_08_1notificationtest_compileDebugJavaWithJavac/
+.gradle/3.3/tasks/_08_2camera_compileDebugJavaWithJavac/
+.gradle/3.3/tasks/_08_3playvideo_compileDebugJavaWithJavac/
+08_04playaudio/libs/
+08_04playaudio/src/main/res/drawable/
+08_2camera/libs/
+08_2camera/src/main/res/drawable/
+08_3playvideo/libs/
+08_3playvideo/src/main/res/drawable/

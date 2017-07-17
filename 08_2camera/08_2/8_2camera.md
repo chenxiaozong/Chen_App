@@ -357,6 +357,253 @@
 
 
 ## 3. 播放音频
+>mediaPlayer API说明
+
+| 方法| 功能描述 |
+| ------------- | ------------- |
+| setDataSource(）| 设置播放音频的文件位置 |
+|prepare()|开始播放前调用该方法完成准备工作|
+|start()|开始或者继续播放|
+|pause()| 暂停播放|
+|reset()| 对mediaplayer对象重置到刚刚创建时的状态|
+|seekTo()| 跳转到指定位置播放|
+|stop()|停止播放音频|
+|release()|释放mediaplayer相关的资源|
+|isPlaying()|判断mediaplayer是否正在播放视频|
+|getDuration()|获取载入的视频的长度|
+
+
+
+>功能：播放，暂停，重新播放，显示播放进度
+
+### 1. 布局文件
+
+```xml
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/bt_play"
+
+            android:textAllCaps="false"
+            android:text="Play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/bt_replay"
+
+            android:textAllCaps="false"
+            android:text="RePlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/bt_pause"
+
+            android:textAllCaps="false"
+            android:text="Pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/sb_audio_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_audio_info"
+        android:hint="info"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+```
+
+
+### 2. onCreate()
+1. 初始化视图对象
+2. 添加点击事件
+3. 运行时权限检查
+
+```java
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        bt_play = (Button) findViewById(R.id.bt_play);
+        bt_replay = (Button) findViewById(R.id.bt_replay);
+        bt_pause = (Button) findViewById(R.id.bt_pause);
+
+        sb_audio_progress = (SeekBar)findViewById(R.id.sb_audio_progress);
+        tv_audio_info = (TextView) findViewById(R.id.tv_audio_info);
+
+
+        bt_replay.setOnClickListener(this);
+        bt_pause.setOnClickListener(this);
+        bt_play.setOnClickListener(this);
+
+        checkRunTimePermission();
+    }
+
+```
+
+### 3. 检查并申请运行时权限
+- 若没有授予权限，申请权限
+- 若已经授予过权限，执行数据初始化
+
+
+```java
+       private void checkRunTimePermission() {
+        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+        } else {
+            initAudioData();
+        }
+
+    }
+
+```
+
+> 判断权限授予情况
+
+```java
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case REQUEST_WRITE_SD:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    initVideoData();
+
+                } else {
+                    Toast.makeText(this, "申请权限被拒绝，关闭程序", Toast.LENGTH_SHORT).show();
+                    finish();//关闭
+                }
+                break;
+
+        }
+    }
+
+```
+
+
+### 4. 初始化音频数据
+- 1. 设置视频路径
+- 2. textview显示音频信息
+
+```java
+      private void initAudioData() {
+        File file = new File(Environment.getExternalStorageDirectory() + "/Download/", "live.mp3");
+      //  File file = new File(Environment.getExternalStorageDirectory() , "zj.mp3");
+        try {
+            mediaPlayer = new MediaPlayer();
+            mediaPlayer.setDataSource(file.getPath());
+            tv_audio_info.setText(file.getPath());
+            mediaPlayer.prepare();
+
+            int duration = mediaPlayer.getDuration();
+            sb_audio_progress.setMax(duration);
+
+
+            //handler.sendEmptyMessageDelayed(UPDATE_PROGRESS,500);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+```
+
+
+### 5. onClick 响应播放动作
+```java
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.bt_play:
+                if(!mediaPlayer.isPlaying()) {
+                    mediaPlayer.start();
+                    handler.removeMessages(UPDATE_PROGRESS);
+                    handler.sendEmptyMessageDelayed(UPDATE_PROGRESS,100);
+                }
+
+                break;
+            case R.id.bt_pause:
+                if(mediaPlayer.isPlaying()) {
+                    mediaPlayer.pause();
+                    handler.removeMessages(UPDATE_PROGRESS);
+                }else {
+                    mediaPlayer.start();
+                    handler.removeMessages(UPDATE_PROGRESS);
+                    handler.sendEmptyMessageDelayed(UPDATE_PROGRESS,100);
+                }
+                break;
+            case R.id.bt_replay:
+//                if(mediaPlayer.isPlaying()) {
+//                }
+                    mediaPlayer.reset();
+                    initAudioData();
+                    mediaPlayer.start();
+                    handler.removeMessages(UPDATE_PROGRESS);
+                    handler.sendEmptyMessageDelayed(UPDATE_PROGRESS,100);
+                break;
+        }
+
+    }
+```
+
+
+
+### 6. onDestroy中释放资源回收handler
+```java
+    @Override
+    protected void onDestroy() {
+
+        //1. 释放资源
+        if(mediaPlayer!=null) {
+            mediaPlayer.stop();
+            mediaPlayer.release();
+        }
+        //2. 回收消息
+        handler.removeCallbacksAndMessages(UPDATE_PROGRESS);
+    }
+```
+
+
+### 7. 使用handler同步显示信息更新seekbar
+```java
+
+    private Handler handler = new Handler(){
+
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what){
+                case 1:
+                    int currentPosition = mediaPlayer.getCurrentPosition();
+                    sb_audio_progress.setProgress(currentPosition);
+                    Log.d("MainActivity", "handler update ");
+                    handler.removeMessages(UPDATE_PROGRESS);
+                    handler.sendEmptyMessageDelayed(UPDATE_PROGRESS,100);
+                    tv_audio_info.setText("进度："+currentPosition+"/"+mediaPlayer.getDuration());
+                    break;
+            }
+        }
+    };
+```
+
+### 8. 添加权限
+```xml
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+```
+
+### 9. 效果
+![Image Title](audio_play.gif) 
+
+
+
+
 
 
 
@@ -494,34 +741,111 @@
 
 
 ### 5. button点击事件
+> 根据需求实现播放，暂停，重新播放功能
+> 并发送handler实时同步视频播放状态
+
 ```java
-  @Override
+ 
+    @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
 
             case R.id.bt_play:
                 Toast.makeText(this, "play", Toast.LENGTH_SHORT).show();
-                if(!vv_video_view.isPlaying()) {
-                    vv_video_view.start();                    
-                }                
-                
+                if (!vv_video_view.isPlaying()) {
+                    vv_video_view.start();
+                    handler.removeMessages(UPDATE_INFO);
+                    handler.sendEmptyMessageDelayed(UPDATE_INFO, 100);
+
+                }
+
                 break;
             case R.id.bt_pause:
-                if(vv_video_view.isPlaying()) {
-                    vv_video_view.pause();                    
+                if (vv_video_view.isPlaying()) {
+                    vv_video_view.pause();
+                    handler.removeMessages(UPDATE_INFO);
+                } else {
+                    vv_video_view.start();
+                    handler.removeMessages(UPDATE_INFO);
+                    handler.sendEmptyMessageDelayed(UPDATE_INFO, 100);
                 }
-                
+
+
                 break;
             case R.id.bt_replay:
-                if(vv_video_view.isPlaying()) {
+                if (vv_video_view.isPlaying()) {
                     vv_video_view.resume();
+                } else {
+                    vv_video_view.resume();
+                    vv_video_view.start();
                 }
+                handler.removeMessages(UPDATE_INFO);
+                handler.sendEmptyMessageDelayed(UPDATE_INFO, 100);
                 break;
 
         }
 
     }
 ```
+
+### 6. 使用handler显示视屏播放进度
+
+```java
+
+    private Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what) {
+                case UPDATE_INFO:
+                    int duration = vv_video_view.getDuration();
+                    int currentPosition = vv_video_view.getCurrentPosition();
+                    tv_video_info.setText("进度：" + currentPosition + "/" + duration);
+
+                    handler.removeMessages(UPDATE_INFO);
+                    handler.sendEmptyMessageDelayed(UPDATE_INFO, 100);
+                    break;
+            }
+        }
+    };
+```
+
+
+### 7. onDestroy中释放资源回收handler
+```java
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        //1. 释放视屏资源
+
+        if (vv_video_view != null) {
+            vv_video_view.suspend();
+        }
+
+        //2. 移除handler消息
+        handler.removeCallbacksAndMessages(UPDATE_INFO);
+
+
+    }
+```
+
+### 8. 读写sd权限
+
+```xml
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+```
+
+
+### 9.效果
+
+![Image Title](play_video.gif) 
+
+
+
+
+
+
 
 
 

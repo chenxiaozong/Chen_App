@@ -143,7 +143,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onDestroy() {
-        super.onDestroy();
+
+        //1. 释放资源
+        if(mediaPlayer!=null) {
+            mediaPlayer.stop();
+            mediaPlayer.release();
+        }
+        //2. 回收消息
         handler.removeCallbacksAndMessages(UPDATE_PROGRESS);
     }
 }
