@@ -104,6 +104,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * 调用摄像头拍照
      */
     private void takePhoto() {
+        ///storage/emulated/0/Android/data/com.example.a08_2camera/cache/output_image.jpg
         File outputImage = new File(getExternalCacheDir(), "output_image.jpg");
 
         if (outputImage.exists()) {
@@ -116,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             e.printStackTrace();
         }
 
-        if (Build.VERSION.SDK_INT >= 24) {
+        if (Build.VERSION.SDK_INT >= 25) {
             imageUri = FileProvider.getUriForFile(MainActivity.this, "com.example.cameraalbumtest.fileprovider", outputImage);
             Log.d("MainActivity", "Build.VERSION.SDK_INT:" + Build.VERSION.SDK_INT);
         } else {
@@ -168,9 +169,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+
     /**
-     * 4.4 以前系统处理图片方法
-     * //Intent { dat=content://com.android.providers.media.documents/document/image:11 flg=0x1 }
+     * 4.4及以上系统处理图片
+     *
      * @param data
      */
     private void handleImageOnKitKat(Intent data) {
@@ -238,8 +240,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     /**
-     * 4.4及以上系统处理图片
-     *
+     * 4.4 以前系统处理图片方法
+     * //Intent { dat=content://com.android.providers.media.documents/document/image:11 flg=0x1 }
      * @param data
      */
     private void handleImageBeforeKitKat(Intent data) {

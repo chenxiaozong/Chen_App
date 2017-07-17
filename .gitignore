@@ -20,3 +20,14 @@ firstlinecode_01activity/build/
 
 07_2contactsreader/build
 
+/08_1notificationtest/src/androidTest/
+.gradle/3.3/tasks/_07_1callphone_compileDebugJavaWithJavac/
+.gradle/3.3/tasks/_07_2contactsreader_compileDebugJavaWithJavac/
+.idea/libraries/core_1_5_1.xml
+07_1callphone/libs/
+07_1callphone/src/main/res/drawable/
+07_2contactsreader/libs/
+07_2contactsreader/src/main/res/drawable/
+08_1notificationtest/build
+/08_1notificationtest/libs/
+/08_1notificationtest/src/test/
