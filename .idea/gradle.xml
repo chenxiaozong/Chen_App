@@ -27,8 +27,13 @@
             <option value="$PROJECT_DIR$/08_2camera" />
             <option value="$PROJECT_DIR$/08_3playvideo" />
             <option value="$PROJECT_DIR$/09_1webview" />
+            <option value="$PROJECT_DIR$/09_2httpurl" />
+            <option value="$PROJECT_DIR$/09_3okhtt_xml" />
+            <option value="$PROJECT_DIR$/10_download" />
+            <option value="$PROJECT_DIR$/10_service" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/firstlinecode_01activity" />
+            <option value="$PROJECT_DIR$/lbslocation" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         Toast.makeText(this, "show", Toast.LENGTH_SHORT).show();
-        //sendNotification(); //基础通知栏
-        sendNotification2(); //进阶通知栏
+        sendNotification(); //基础通知栏
+        //sendNotification2(); //进阶通知栏
 
     }
 
