@@ -25,10 +25,12 @@
       <module fileurl="file://$PROJECT_DIR$/09_3okhtt_xml/09_3okhtt_xml.iml" filepath="$PROJECT_DIR$/09_3okhtt_xml/09_3okhtt_xml.iml" />
       <module fileurl="file://$PROJECT_DIR$/10_download/10_download.iml" filepath="$PROJECT_DIR$/10_download/10_download.iml" />
       <module fileurl="file://$PROJECT_DIR$/10_service/10_service.iml" filepath="$PROJECT_DIR$/10_service/10_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/11_lbslocation/11_lbslocation.iml" filepath="$PROJECT_DIR$/11_lbslocation/11_lbslocation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/12_book/12_book.iml" filepath="$PROJECT_DIR$/12_book/12_book.iml" />
+      <module fileurl="file://$PROJECT_DIR$/12_materialdesign/12_materialdesign.iml" filepath="$PROJECT_DIR$/12_materialdesign/12_materialdesign.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chen_App.iml" filepath="$PROJECT_DIR$/Chen_App.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/firstlinecode_01activity/firstlinecode_01activity.iml" filepath="$PROJECT_DIR$/firstlinecode_01activity/firstlinecode_01activity.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lbslocation/lbslocation.iml" filepath="$PROJECT_DIR$/lbslocation/lbslocation.iml" />
     </modules>
   </component>
 </project>

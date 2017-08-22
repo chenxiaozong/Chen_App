@@ -31,9 +31,11 @@
             <option value="$PROJECT_DIR$/09_3okhtt_xml" />
             <option value="$PROJECT_DIR$/10_download" />
             <option value="$PROJECT_DIR$/10_service" />
+            <option value="$PROJECT_DIR$/11_lbslocation" />
+            <option value="$PROJECT_DIR$/12_book" />
+            <option value="$PROJECT_DIR$/12_materialdesign" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/firstlinecode_01activity" />
-            <option value="$PROJECT_DIR$/lbslocation" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
