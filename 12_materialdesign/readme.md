@@ -1,10 +1,76 @@
 
-12章: 最佳UI体验
 
-[TOC]
 
-# 1. 使用Toolbar
-## 1. 布局文件
+
+<!-- MarkdownTOC -->
+
+- [1. 使用Toolbar](#1-%E4%BD%BF%E7%94%A8toolbar)
+    - [1. 布局文件](#1-%E5%B8%83%E5%B1%80%E6%96%87%E4%BB%B6)
+    - [2. Manifes文件](#2-manifes%E6%96%87%E4%BB%B6)
+    - [3. 样式文件设置toolbar样式](#3-%E6%A0%B7%E5%BC%8F%E6%96%87%E4%BB%B6%E8%AE%BE%E7%BD%AEtoolbar%E6%A0%B7%E5%BC%8F)
+    - [4. MainActivity 中添加支持](#4-mainactivity-%E4%B8%AD%E6%B7%BB%E5%8A%A0%E6%94%AF%E6%8C%81)
+- [2. Toolbar 添加按钮和图片](#2-toolbar-%E6%B7%BB%E5%8A%A0%E6%8C%89%E9%92%AE%E5%92%8C%E5%9B%BE%E7%89%87)
+    - [1. 创建按钮布局文件](#1-%E5%88%9B%E5%BB%BA%E6%8C%89%E9%92%AE%E5%B8%83%E5%B1%80%E6%96%87%E4%BB%B6)
+    - [2. Activity 中加载menu布局,并设置监听](#2-activity-%E4%B8%AD%E5%8A%A0%E8%BD%BDmenu%E5%B8%83%E5%B1%80%E5%B9%B6%E8%AE%BE%E7%BD%AE%E7%9B%91%E5%90%AC)
+    - [3. 显示效果](#3-%E6%98%BE%E7%A4%BA%E6%95%88%E6%9E%9C)
+- [3. 滑动效果](#3-%E6%BB%91%E5%8A%A8%E6%95%88%E6%9E%9C)
+    - [1. 使用DrawerLayout](#1-%E4%BD%BF%E7%94%A8drawerlayout)
+    - [2.效果](#2%E6%95%88%E6%9E%9C)
+- [3. Toolbar添加侧滑按钮](#3-toolbar%E6%B7%BB%E5%8A%A0%E4%BE%A7%E6%BB%91%E6%8C%89%E9%92%AE)
+    - [1. 为Toolbar添加HomeAsUp 按钮](#1-%E4%B8%BAtoolbar%E6%B7%BB%E5%8A%A0homeasup-%E6%8C%89%E9%92%AE)
+    - [2. 设置侧滑按钮的点击事件](#2-%E8%AE%BE%E7%BD%AE%E4%BE%A7%E6%BB%91%E6%8C%89%E9%92%AE%E7%9A%84%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6)
+    - [3. 效果](#3-%E6%95%88%E6%9E%9C)
+- [4. 使用NavigationView](#4-%E4%BD%BF%E7%94%A8navigationview)
+    - [1. 侧滑栏menu布局](#1-%E4%BE%A7%E6%BB%91%E6%A0%8Fmenu%E5%B8%83%E5%B1%80)
+    - [2. 侧滑的头布局](#2-%E4%BE%A7%E6%BB%91%E7%9A%84%E5%A4%B4%E5%B8%83%E5%B1%80)
+    - [3. mainactivity 布局中引用nav_view](#3-mainactivity-%E5%B8%83%E5%B1%80%E4%B8%AD%E5%BC%95%E7%94%A8navview)
+    - [4. MainActivity 代码中使用](#4-mainactivity-%E4%BB%A3%E7%A0%81%E4%B8%AD%E4%BD%BF%E7%94%A8)
+    - [5. 效果](#5-%E6%95%88%E6%9E%9C)
+- [5. 使用旋风按钮 FloatingActionBar](#5-%E4%BD%BF%E7%94%A8%E6%97%8B%E9%A3%8E%E6%8C%89%E9%92%AE-floatingactionbar)
+    - [1. activity_main.xml 中添加flaotingActionBar控件](#1-activitymainxml-%E4%B8%AD%E6%B7%BB%E5%8A%A0flaotingactionbar%E6%8E%A7%E4%BB%B6)
+    - [2. 设置点击事件](#2-%E8%AE%BE%E7%BD%AE%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6)
+    - [3. 效果](#3-%E6%95%88%E6%9E%9C-1)
+- [6. 使用SnackBar](#6-%E4%BD%BF%E7%94%A8snackbar)
+    - [1. 使用](#1-%E4%BD%BF%E7%94%A8)
+    - [2. 效果](#2-%E6%95%88%E6%9E%9C)
+- [7. 使用CoodinatorLayout](#7-%E4%BD%BF%E7%94%A8coodinatorlayout)
+    - [1. 使用](#1-%E4%BD%BF%E7%94%A8-1)
+    - [2.效果](#2%E6%95%88%E6%9E%9C-1)
+- [8. 卡片式布局Cardview](#8-%E5%8D%A1%E7%89%87%E5%BC%8F%E5%B8%83%E5%B1%80cardview)
+    - [1. 基本用法](#1-%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95)
+    - [2. activity_main.xml中添加recycleview](#2-activitymainxml%E4%B8%AD%E6%B7%BB%E5%8A%A0recycleview)
+    - [3. 设置recycleview 的adapter](#3-%E8%AE%BE%E7%BD%AErecycleview-%E7%9A%84adapter)
+    - [4. MainActivity](#4-mainactivity)
+    - [5. 效果](#5-%E6%95%88%E6%9E%9C-1)
+- [9. 自动隐藏/显示toolbar: AppBarLayout](#9-%E8%87%AA%E5%8A%A8%E9%9A%90%E8%97%8F%E6%98%BE%E7%A4%BAtoolbar-appbarlayout)
+    - [1. 消除recycleview遮挡toolbar](#1-%E6%B6%88%E9%99%A4recycleview%E9%81%AE%E6%8C%A1toolbar)
+    - [2. 使用AppBarLayout 新特性](#2-%E4%BD%BF%E7%94%A8appbarlayout-%E6%96%B0%E7%89%B9%E6%80%A7)
+    - [3. 效果](#3-%E6%95%88%E6%9E%9C-2)
+- [10. 下拉刷新](#10-%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0)
+    - [1. 修改布局](#1-%E4%BF%AE%E6%94%B9%E5%B8%83%E5%B1%80)
+    - [2. 添加刷新逻辑](#2-%E6%B7%BB%E5%8A%A0%E5%88%B7%E6%96%B0%E9%80%BB%E8%BE%91)
+    - [3. 效果](#3-%E6%95%88%E6%9E%9C-3)
+- [11. 可折叠式标题栏](#11-%E5%8F%AF%E6%8A%98%E5%8F%A0%E5%BC%8F%E6%A0%87%E9%A2%98%E6%A0%8F)
+    - [1. FruitActivity布局](#1-fruitactivity%E5%B8%83%E5%B1%80)
+    - [2. FruitActivity代码](#2-fruitactivity%E4%BB%A3%E7%A0%81)
+        - [1. initData :从inent中获取fruit数据](#1-initdata-%E4%BB%8Einent%E4%B8%AD%E8%8E%B7%E5%8F%96fruit%E6%95%B0%E6%8D%AE)
+        - [2. 初始化控件](#2-%E5%88%9D%E5%A7%8B%E5%8C%96%E6%8E%A7%E4%BB%B6)
+    - [3. RecyclerView设置监听,跳转到FruitActivity](#3-recyclerview%E8%AE%BE%E7%BD%AE%E7%9B%91%E5%90%AC%E8%B7%B3%E8%BD%AC%E5%88%B0fruitactivity)
+    - [4. 效果](#4-%E6%95%88%E6%9E%9C)
+- [12. 修改系统状态栏](#12-%E4%BF%AE%E6%94%B9%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E6%A0%8F)
+    - [1. 修改布局文件](#1-%E4%BF%AE%E6%94%B9%E5%B8%83%E5%B1%80%E6%96%87%E4%BB%B6)
+    - [2. 定义一个FruitActivity主题](#2-%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AAfruitactivity%E4%B8%BB%E9%A2%98)
+    - [3. style文件中添加新建的主题](#3-style%E6%96%87%E4%BB%B6%E4%B8%AD%E6%B7%BB%E5%8A%A0%E6%96%B0%E5%BB%BA%E7%9A%84%E4%B8%BB%E9%A2%98)
+    - [4. Manifes文件修改FruitActivity 的主题](#4-manifes%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9fruitactivity-%E7%9A%84%E4%B8%BB%E9%A2%98)
+    - [5. 效果](#5-%E6%95%88%E6%9E%9C-2)
+
+<!-- /MarkdownTOC -->
+
+
+
+
+## 1. 使用Toolbar
+### 1. 布局文件
 
 ```xml
     <android.support.v7.widget.Toolbar
@@ -21,7 +87,7 @@
 
 ```
 
-## 2. Manifes文件 
+### 2. Manifes文件 
 > 设置Toolbar字体 在activity标签中使用label 若不设置,默认使用 application 中的label
 
 
@@ -40,7 +106,7 @@
 
 ```
 
-## 3. 样式文件设置toolbar样式
+### 3. 样式文件设置toolbar样式
 1. 通知栏颜色 primary 
 2. 标题栏颜色 primaryDarky
 3. 强调颜色 accent
@@ -56,7 +122,7 @@
 ```
 
 
-## 4. MainActivity 中添加支持
+### 4. MainActivity 中添加支持
 
 ```java
 
@@ -81,9 +147,9 @@ public class MainActivity extends AppCompatActivity {
 ![ToolBar](img/01_toolbar.png) 
 
 
-# 2. Toolbar 添加按钮和图片
+## 2. Toolbar 添加按钮和图片
 
-## 1. 创建按钮布局文件
+### 1. 创建按钮布局文件
 > 参数
 
 | 参数名 | 参数值 | 作用 |
@@ -119,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
 </menu>
 ```
 
-## 2. Activity 中加载menu布局,并设置监听
+### 2. Activity 中加载menu布局,并设置监听
 
 > 加载布局
 
@@ -160,16 +226,16 @@ Multi-line Code
 ```
 
 
-## 3. 显示效果
+### 3. 显示效果
 ![Image Title](img/02_toolbar_menu.png) 
 
 
 
-# 3. 滑动效果
+## 3. 滑动效果
 
 > 将一些菜单的效果隐藏起来,而不是显示在屏幕上
 
-## 1. 使用DrawerLayout
+### 1. 使用DrawerLayout
 
 > DrawerLayout 是一个布局,在其中允许放两个直接子控件
 
@@ -239,16 +305,16 @@ Multi-line Code
 ```
 
 
-## 2.效果
+### 2.效果
 
 ![drawerlayout](img/03_drawlayout.png) 
 
 
-# 3. Toolbar添加侧滑按钮
+## 3. Toolbar添加侧滑按钮
 
 > 在标题栏(toolbar)添加侧滑按钮,当点击按钮时,显示侧滑菜单
 
-## 1. 为Toolbar添加HomeAsUp 按钮
+### 1. 为Toolbar添加HomeAsUp 按钮
 
 > Oncrete 
 
@@ -266,7 +332,7 @@ Multi-line Code
 
 
 
-## 2. 设置侧滑按钮的点击事件
+### 2. 设置侧滑按钮的点击事件
 
 ```java
  @Override
@@ -282,13 +348,13 @@ Multi-line Code
 
 ```
 
-## 3. 效果
+### 3. 效果
 
 ![HomeAsUp](img/04_homeasup.png) 
 
 
 
-# 4. 使用NavigationView
+## 4. 使用NavigationView
 
 > NavigationView 是DesignSuppor库中提供的一个控件,可以将滑动菜单页面实现变得非常简单
 
@@ -299,7 +365,7 @@ Multi-line Code
 
 
 
-## 1. 侧滑栏menu布局
+### 1. 侧滑栏menu布局
 
 1. 使用group定义一个组
 2. checkableBehavior 设置组中菜单只能单选
@@ -339,7 +405,7 @@ Multi-line Code
 ```
 
 
-## 2. 侧滑的头布局
+### 2. 侧滑的头布局
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -386,7 +452,7 @@ Multi-line Code
 ```
 
 
-## 3. mainactivity 布局中引用nav_view
+### 3. mainactivity 布局中引用nav_view
 > NavigationView 包含: nav_menu 和nav_header
 
 ```xml
@@ -408,7 +474,7 @@ Multi-line Code
 ```
 
 
-## 4. MainActivity 代码中使用
+### 4. MainActivity 代码中使用
 > 1. 初始化nav_view 控件
 > 2. 添加点击事件
 
@@ -428,14 +494,14 @@ Multi-line Code
 ```
 
 
-## 5. 效果
+### 5. 效果
 ![Image Title](img/06_nav_view.png) 
 
 
-# 5. 使用旋风按钮 FloatingActionBar
+## 5. 使用旋风按钮 FloatingActionBar
 > FloatingActionBar 是DesignSuppor库中提供的一个控件,可以轻松的实现悬浮按钮的效果,默认使用colorAccent作为默认颜色
 
-## 1. activity_main.xml 中添加flaotingActionBar控件
+### 1. activity_main.xml 中添加flaotingActionBar控件
 
 > 参数:
 
@@ -461,7 +527,7 @@ Multi-line Code
 
 ```
 
-## 2. 设置点击事件
+### 2. 设置点击事件
 ```java
         //初始化flatingactionButton 控件
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_main);
@@ -473,14 +539,14 @@ Multi-line Code
         });
 ```
 
-## 3. 效果
+### 3. 效果
 ![Image Title](img/07_floating_action_button.png) 
 
-# 6. 使用SnackBar 
+## 6. 使用SnackBar 
 > SnackBar 是DesignSuppor库中提供的一个更加先进的提示工具
 > 允许提示中添加一个可以交互的按钮,当用户点击按钮时可以执行一些额外的逻辑,
 
-## 1. 使用
+### 1. 使用
 ```java
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -499,29 +565,29 @@ Multi-line Code
         });
 ```
 
-## 2. 效果
+### 2. 效果
 
 ![Image Title](img/07_snackbar.png) 
 
 >问题:当弹出Snackbar 时遮挡住底部的FloatingActionBar
 
 
-# 7. 使用CoodinatorLayout 
+## 7. 使用CoodinatorLayout 
 > CoordinatorLayout 是一个加强版的FrameLayout, 是由DesignSupport提供
 > 特点:
 > 可以监听所有子控件的各种事件,然后自动为我们做出合理的响应
 
-## 1. 使用
+### 1. 使用
 > 将activity_main.xml 中的FrameLayout替换为CoordinatorLayout
 
-## 2.效果 
+### 2.效果 
 ![Image Title](img/08_coordinatorlayout.png) 
 
 
-# 8. 卡片式布局Cardview
+## 8. 卡片式布局Cardview
 > Cardview是用于实现卡片式布局的一个重要控件,由appcompat-v7库提供,本质上也是一个framelayout,只是额外的提供了圆角和阴影等效果,看上去会更有立体感
 
-## 1. 基本用法
+### 1. 基本用法
 
 > 添加依赖:
 1. carview依赖: 用于卡片式布局
@@ -535,7 +601,7 @@ Multi-line Code
 ```
 
 
-## 2. activity_main.xml中添加recycleview 
+### 2. activity_main.xml中添加recycleview 
 ```xml
   <?xml version="1.0" encoding="utf-8"?>
 
@@ -574,7 +640,7 @@ Multi-line Code
 ```
 
 
-## 3. 设置recycleview 的adapter
+### 3. 设置recycleview 的adapter
 
 > 使用Glide加载图片
 
@@ -644,7 +710,7 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.FruitViewHol
 ```
 
 
-## 4. MainActivity
+### 4. MainActivity
 > 1. 初始化数据fruits
 > 2. 初始化fruitList
 > 3. 初始化recyclerview
@@ -707,17 +773,17 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.FruitViewHol
 
 
 
-## 5. 效果
+### 5. 效果
 
 ![cardview](img/09_carview.png) 
 
 > 注意: recycleview遮挡住了toolbar, 需要使用AppBarLayout解决
 
-# 9. 自动隐藏/显示toolbar: AppBarLayout
+## 9. 自动隐藏/显示toolbar: AppBarLayout
 > 分析
 toolbar 之所以被recyclerview遮挡,是因为他们都存在于一个CoordinatorLayout 中,因为CoordinatorLayout 是一个加强版的FrameLayout,那么FrameLayout所有控件在不明确定位的情况下都默认摆放到布局的左上角,从而产生了遮挡现象
 
-## 1. 消除recycleview遮挡toolbar
+### 1. 消除recycleview遮挡toolbar
 
 
 >解决
@@ -792,7 +858,7 @@ toolbar 之所以被recyclerview遮挡,是因为他们都存在于一个Coordina
 ![AppBarLayout](img/10_appbarlayout.png) 
 
 
-## 2. 使用AppBarLayout 新特性
+### 2. 使用AppBarLayout 新特性
 
  1. 当向下滚动recycleview时, 隐藏toolbar
  2. 当向上滚动recycleview时, 显示toolbar  
@@ -823,7 +889,7 @@ toolbar 之所以被recyclerview遮挡,是因为他们都存在于一个Coordina
             </android.support.v7.widget.Toolbar>
 ```
 
-## 3. 效果
+### 3. 效果
 
 ![Toolbar](img/11_toolbarauto_hide.png) 
 
@@ -832,13 +898,13 @@ toolbar 之所以被recyclerview遮挡,是因为他们都存在于一个Coordina
 
 
 
-# 10. 下拉刷新
+## 10. 下拉刷新
 
 > SwipeRefreshLayout: 将需要下拉刷新的控件放到此标签内,就可以实现下拉刷新
 
 - 由suppor-v4 库提供 
 
-## 1. 修改布局 
+### 1. 修改布局 
 
 - 使用SwipeRefreshLayout 包裹 RecyclerView
 - 将recycleview 中的 layout_behavior 移动到SwipeRefreshLayout
@@ -869,7 +935,7 @@ toolbar 之所以被recyclerview遮挡,是因为他们都存在于一个Coordina
 
 
 
-## 2. 添加刷新逻辑
+### 2. 添加刷新逻辑
 
 
 1. 初始化swipeRefreshLayout
@@ -935,12 +1001,12 @@ Multi-line Code
 ```
 
 
-## 3. 效果
+### 3. 效果
 ![Frefresh](img/12_refresh.png) 
 
-# 11. 可折叠式标题栏
+## 11. 可折叠式标题栏
 
-## 1. FruitActivity布局
+### 1. FruitActivity布局
 
 - CoordinatorLayout :整个布局使用此控件包裹
     + AppBarLayout
@@ -1063,9 +1129,9 @@ Multi-line Code
 
 
 
-## 2. FruitActivity代码
+### 2. FruitActivity代码
 
-### 1. initData :从inent中获取fruit数据
+#### 1. initData :从inent中获取fruit数据
 
 
 ```java
@@ -1088,7 +1154,7 @@ Multi-line Code
 ```
 
 
-### 2. 初始化控件
+#### 2. 初始化控件
 - 设置标题栏文本: collapsingToolbarLayout.setTitle
 - 设置标题栏显示图片:使用Glide
 - 设置详细内容:textView.setText(fruitContent);
@@ -1147,7 +1213,7 @@ Multi-line Code
 
 
 
-## 3. RecyclerView设置监听,跳转到FruitActivity
+### 3. RecyclerView设置监听,跳转到FruitActivity
 
 > FruitAdapter 中为carview 设置点击监听,点击时跳转到详细页面
 
@@ -1186,15 +1252,15 @@ Multi-line Code
 
 
 
-## 4. 效果
+### 4. 效果
 ![Image Title](img/14_CoolapsingToolBarLayout.gif) 
 
 
 
-# 12. 修改系统状态栏
+## 12. 修改系统状态栏
 > 要想将背景和系统的状态了融合,需要借助: android:fitsSystemWindows
 
-## 1. 修改布局文件
+### 1. 修改布局文件
 
 具体操作步骤:
 1. 将所有关imageview 及其父标签的filtsSystemWindows属性设置为true
@@ -1244,7 +1310,7 @@ Multi-line Code
 
 
 
-## 2. 定义一个FruitActivity主题
+### 2. 定义一个FruitActivity主题
 
 1. res中新建values-21文件夹(只有5.0及以上系统才会读取)
 2. parent="AppTheme" > 继承appthem的所有特性
@@ -1266,7 +1332,7 @@ Multi-line Code
 
 
 
-## 3. style文件中添加新建的主题
+### 3. style文件中添加新建的主题
 
 ```xml
     <!--FruiActivity状态了透明-->
@@ -1274,7 +1340,7 @@ Multi-line Code
 ```
 
 
-## 4. Manifes文件修改FruitActivity 的主题
+### 4. Manifes文件修改FruitActivity 的主题
 ```xml
         <activity android:name=".FruitActivity"
             android:theme="@style/FruitActivityTheme"
@@ -1283,7 +1349,7 @@ Multi-line Code
 
 
 
-## 5. 效果
+### 5. 效果
 ![Image Title](img/13_tanspan_systemwindow.png) 
 
 
