@@ -28,9 +28,12 @@
       <module fileurl="file://$PROJECT_DIR$/11_lbslocation/11_lbslocation.iml" filepath="$PROJECT_DIR$/11_lbslocation/11_lbslocation.iml" />
       <module fileurl="file://$PROJECT_DIR$/12_book/12_book.iml" filepath="$PROJECT_DIR$/12_book/12_book.iml" />
       <module fileurl="file://$PROJECT_DIR$/12_materialdesign/12_materialdesign.iml" filepath="$PROJECT_DIR$/12_materialdesign/12_materialdesign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/14_book/14_book.iml" filepath="$PROJECT_DIR$/14_book/14_book.iml" />
+      <module fileurl="file://$PROJECT_DIR$/14_weather/14_weather.iml" filepath="$PROJECT_DIR$/14_weather/14_weather.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chen_App.iml" filepath="$PROJECT_DIR$/Chen_App.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/firstlinecode_01activity/firstlinecode_01activity.iml" filepath="$PROJECT_DIR$/firstlinecode_01activity/firstlinecode_01activity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weather/weather.iml" filepath="$PROJECT_DIR$/weather/weather.iml" />
     </modules>
   </component>
 </project>

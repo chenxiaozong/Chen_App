@@ -34,8 +34,11 @@
             <option value="$PROJECT_DIR$/11_lbslocation" />
             <option value="$PROJECT_DIR$/12_book" />
             <option value="$PROJECT_DIR$/12_materialdesign" />
+            <option value="$PROJECT_DIR$/14_book" />
+            <option value="$PROJECT_DIR$/14_weather" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/firstlinecode_01activity" />
+            <option value="$PROJECT_DIR$/weather" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
